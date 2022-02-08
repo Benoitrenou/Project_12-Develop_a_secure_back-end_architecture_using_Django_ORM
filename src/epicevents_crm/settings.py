@@ -39,8 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'authentification',
-    'crm',
     'drf_yasg',
+    'clients',
+    'contracts',
+    'events',
 ]
 
 MIDDLEWARE = [

@@ -1,5 +1,6 @@
 from rest_framework.serializers import ModelSerializer
-from .models import Company, Contact, Contract, Event
+
+from clients.models import Company, Contact
 
 
 class CompanySerializer(ModelSerializer):
@@ -30,31 +31,3 @@ class ContactSerializer(ModelSerializer):
             'mobile',
             'company'
             ]
-
-
-class ContractSerializer(ModelSerializer):
-
-    class Meta:
-        model = Contract
-        fields = [
-            'id',
-            'client',
-            'signed_status',
-            'amount',
-            'payment_due'
-        ]
-
-
-class EventSerializer(ModelSerializer):
-
-    class Meta:
-        model = Event
-        fields = [
-            'id',
-            'contract',
-            'support_contact',
-            'finished',
-            'attendees',
-            'date',
-            'note'
-        ]

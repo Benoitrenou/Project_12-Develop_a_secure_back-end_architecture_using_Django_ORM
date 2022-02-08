@@ -33,37 +33,3 @@ class Contact(models.Model):
         related_name='contacts',
         on_delete=models.CASCADE
         )
-
-
-class Contract(models.Model):
-
-    client = models.ForeignKey(
-        to=Contact,
-        related_name='contracts',
-        on_delete=models.CASCADE
-        )
-    date_created = models.DateField(auto_now_add=True)
-    date_updated = models.DateField(auto_now=True)
-    signed_status = models.BooleanField(default=False)
-    amount = models.FloatField()
-    payment_due = models.DateField()
-
-
-class Event(models.Model):
-
-    contract = models.ForeignKey(
-        to=Contract,
-        related_name='event',
-        on_delete=models.CASCADE
-        )
-    support_contact = models.ForeignKey(
-        to=settings.AUTH_USER_MODEL,
-        related_name='events',
-        on_delete=models.SET_NULL,
-        null=True)
-    date_created = models.DateField(auto_now_add=True)
-    date_updated = models.DateField(auto_now=True)
-    finished = models.BooleanField(default=False)
-    attendees = models.IntegerField()
-    date = models.DateField()
-    notes = models.TextField()
