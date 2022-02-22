@@ -94,6 +94,7 @@ DATABASES = {
         'PASSWORD': 'projet12',
         'HOST': 'localhost',
         'PORT': '',
+        
     }
 }
 

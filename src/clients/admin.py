@@ -12,9 +12,14 @@ class CompanyAdmin(admin.ModelAdmin):
         'name',
         'sales_contact',
         'client',
+        'date_created',
+        'date_updated'
         )
+    list_filter = (
+        'name',
+        'sales_contact',
+    )
     inlines = [ContactInLine]
     search_fields = ['name__startswith']
-
 
 admin.site.register(Company, CompanyAdmin)

@@ -11,6 +11,12 @@ class EventAdmin(admin.ModelAdmin):
         'date',
         'attendees'
     )
+    list_filter = (
+        'support_contact',
+        'finished',
+        'date',
+        'attendees',
+    )
 
 
 admin.site.register(Event, EventAdmin)

@@ -28,15 +28,3 @@ class User(AbstractUser):
     mobile = models.CharField(max_length=20)
     date_created = models.DateField(auto_now_add=True)
     date_updated = models.DateField(auto_now=True)
-
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
-        if self.role == self.MANAGEMENT:
-            group = Group.objects.get(name='management')
-            group.user_set.add(self)
-        elif self.role == self.SALES:
-            group = Group.objects.get(name='sales')
-            group.user_set.add(self)
-        elif self.role == self.SUPPORT:
-            group = Group.objects.get(name='support')
-            group.user_set.add(self)

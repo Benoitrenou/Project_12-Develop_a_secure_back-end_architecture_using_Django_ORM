@@ -32,6 +32,7 @@ class UserSerializer(ModelSerializer):
         model = User
         fields = [
             'id',
+            'username',
             'first_name',
             'last_name',
             'role',
@@ -67,5 +68,6 @@ class UserSerializer(ModelSerializer):
             last_name=validated_data['last_name']
         )
         user.set_password(validated_data['password'])
+        user.is_staff = True
         user.save()
         return user

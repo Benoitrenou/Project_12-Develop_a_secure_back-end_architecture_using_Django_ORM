@@ -10,7 +10,7 @@ class CompanySerializer(ModelSerializer):
         fields = [
             'id',
             'name',
-            'address',
+            'adress',
             'website',
             'notes',
             'sales_contact',

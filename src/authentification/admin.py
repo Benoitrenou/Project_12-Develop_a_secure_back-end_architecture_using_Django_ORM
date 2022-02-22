@@ -19,6 +19,10 @@ class CustomUserAdmin(admin.ModelAdmin):
         'date_created',
         'date_updated'
         )
+    list_filter = (
+        'role',
+        'last_name',
+    )
 
 
 admin.site.register(User, CustomUserAdmin)

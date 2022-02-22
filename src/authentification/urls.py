@@ -6,7 +6,7 @@ from .views import UserViewSet, MyObtainTokenPairView
 
 
 router = DefaultRouter()
-router.register('companies', UserViewSet)
+router.register('users', UserViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

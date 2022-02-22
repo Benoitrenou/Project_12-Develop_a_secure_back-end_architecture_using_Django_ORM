@@ -14,3 +14,9 @@ class ContractViewSet(ModelViewSet):
         IsAuthenticated,
         HasContractPermissions
         ]
+    filterset_fields = [
+        'client',
+        'client__company__sales_contact',
+        'signed_status',
+        'payment_due'
+        ]

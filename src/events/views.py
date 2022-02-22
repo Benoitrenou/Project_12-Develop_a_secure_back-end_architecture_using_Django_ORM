@@ -14,3 +14,10 @@ class EventViewSet(ModelViewSet):
         IsAuthenticated,
         HasEventPermissions
         ]
+    filterset_fields = [
+        'contract__client__company__sales_contact',
+        'support_contact',
+        'finsihed',
+        'attendees',
+        'date',
+        ]

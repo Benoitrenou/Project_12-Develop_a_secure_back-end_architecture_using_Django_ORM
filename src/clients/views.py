@@ -14,6 +14,10 @@ class CompanyViewSet(ModelViewSet):
         IsAuthenticated,
         HasClientPermissions
         ]
+    filterset_fields = [
+        'name',
+        'sales_contact',
+        ]
 
 
 class ContactViewSet(ModelViewSet):
