@@ -8,11 +8,10 @@ class HasClientPermissions(BasePermission):
         return True
 
     def has_object_permission(self, request, view, obj):
-        """ if request.user.is_superuser:
+        if request.user.is_superuser:
             return True
         if request.method in SAFE_METHODS:
             return True
         if request.user.role == User.MANAGEMENT:
             return True
-        return request.user == obj.sales_contact """
-        return True
+        return request.user == obj.sales_contact

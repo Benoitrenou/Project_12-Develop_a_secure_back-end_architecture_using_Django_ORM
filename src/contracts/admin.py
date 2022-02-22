@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Contract
 
+
 class ContractAdmin(admin.ModelAdmin):
 
     list_display = (
@@ -14,5 +15,6 @@ class ContractAdmin(admin.ModelAdmin):
         'client__company',
         'client__company__sales_contact',
     )
+
 
 admin.site.register(Contract, ContractAdmin)

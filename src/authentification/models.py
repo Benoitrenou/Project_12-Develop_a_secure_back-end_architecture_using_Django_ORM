@@ -1,4 +1,4 @@
-from django.contrib.auth.models import AbstractUser, Group
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 
@@ -6,7 +6,6 @@ class User(AbstractUser):
     MANAGEMENT = 'MANAGEMENT'
     SALES = 'SALES'
     SUPPORT = 'SUPPORT'
-
 
     ROLE_CHOICES = (
         (MANAGEMENT, 'Gestion'),
