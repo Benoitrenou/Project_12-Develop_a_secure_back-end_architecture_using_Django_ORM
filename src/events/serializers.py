@@ -14,5 +14,5 @@ class EventSerializer(ModelSerializer):
             'finished',
             'attendees',
             'date',
-            'note'
+            'notes'
         ]

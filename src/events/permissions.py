@@ -2,7 +2,7 @@ from rest_framework.permissions import BasePermission, SAFE_METHODS
 from authentification.models import User
 
 
-class HasClientPermissions(BasePermission):
+class HasEventPermissions(BasePermission):
 
     def has_permission(self, request, view):
         return True
@@ -14,4 +14,6 @@ class HasClientPermissions(BasePermission):
             return True
         if request.user.role == User.MANAGEMENT:
             return True
-        return request.user == obj.sales_contact
+        if request.user == obj.contract__company__sales_contact:
+            return True
+        return request.user == obj.support_contact

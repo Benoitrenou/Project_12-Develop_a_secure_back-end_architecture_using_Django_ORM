@@ -18,6 +18,9 @@ class Company(models.Model):
     date_created = models.DateField(auto_now_add=True)
     date_updated = models.DateField(auto_now=True)
 
+    def __str__(self):
+        return f'{self.name}'
+
 
 class Contact(models.Model):
 
@@ -33,3 +36,6 @@ class Contact(models.Model):
         related_name='contacts',
         on_delete=models.CASCADE
         )
+
+    def __str__(self):
+        return f'{self.last_name}, {self.first_name}'

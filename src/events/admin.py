@@ -1,3 +1,16 @@
 from django.contrib import admin
+from .models import Event
 
-# Register your models here.
+
+class EventAdmin(admin.ModelAdmin):
+
+    list_display = (
+        'contract',
+        'support_contact',
+        'finished',
+        'date',
+        'attendees'
+    )
+
+
+admin.site.register(Event, EventAdmin)
