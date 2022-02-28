@@ -89,7 +89,7 @@ DATABASES = {
     #}
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'epicevents_db',
+        'NAME': 'fork_p12',
         'USER': 'epic_events_user',
         'PASSWORD': 'projet12',
         'HOST': 'localhost',
