@@ -1,61 +1,53 @@
-# projet_12
+In this scenario, EpicEvents wants to develop an API that will serve as a CRM
 
-Ce projet est une API développée pour EpicEvents qui servira de CRM
+The Entity-Relationship diagram must be built before moving to the API via Django REST
 
-Cette application a été construite via Django Rest Framework dans sa version 3.13.1.
+This application was built using Django Rest Framework in its version 3.13.1.
 
-Afin de faire fonctionner cette application en local, veuillez suivres les indications suivantes
+Objectives of the project:
+  - Build an Entity-Relationships diagram
+  - Build models of the application base on client work descritpion
+  - Configure a database via PostgreSQL and integrate it to Django settings
+  - Customize the administration interface of the application
 
-## Clônage du projet
+## Entity-Relationships diagram
 
-Tout d'abord, clônez en local le dépôt distant via la commande suivante dans votre terminal :
+You can access the diagram in the file diagramme_epic_events_crm.jpg 
 
-    $ git clone https://github.com/Benoitrenou/projet_12.git
+## Create virtual environment
 
-## Création de l'environnement virtuel
+From your terminal, enter the following commands depending on your operating system
 
-Pour créer un environnement virtuel, depuis votre terminal de commande, effectuez les commandes suivantes :
-
-### Sous Linux/ MAC OS
+### With Linux/ MAC OS
 
     $ python -m venv <environment_name>
-    exemple : python -m venv venvAPI
+    example : python -m venv venvAPI
     
-### Sous Windows:
+### With Windows:
     
     $ virtualenv <environment_name>
-    exemple : virtualenv venvAPI 
+    example : virtualenv venvAPI 
     
-## Activation de l'environnement virtuel 
+## Activate virtual environment
 
-### Sous Linux / MAC OS:
+### With Linux / MAC OS:
 
     $ source <environment_name>/bin/activate
-    exemple : source venvAPI/bin/activate
+    example : source venvAPI/bin/activate
    
-### Sous Windows:
+### With Windows:
 
     $ source <environment_name>/Scripts/activate
-    exemple : source venvAPI/Scripts/activate
+    example : source venvAPI/Scripts/activate
     
-## Installation des packages : 
-
-Afin que les packages nécessaires au fonctionnement de l'application soient installés sur l'environnement virtuel, entrez la commande suivante :
+## Installation of packages : 
 
     $ pip install -r requirements.txt
 
-## Lancement de l'application
-
-Enfin pour lancer l'API, dans le terminal depuis le répertoire du projet :
+## Launch application
 
     $ python manage.py runserver
-    
-## Accès à la documentation
 
-Vous pouvez retrouver toute la documentation de l'API [à cette adresse](https://documenter.getpostman.com/view/17414272/UVknsb7L)
+## Documentation
 
-## Générer un rapport Flake8
-
-Pour générer un rapport Flake8 dans le terminal, placez vous dans le dossier de travail parent du projet, et utilisez la commande :
-
-    $ flake8 projet_12 --exclude venv,__pychache__,settings.py,migrations
+You can find the documentation of the API [at this address](https://documenter.getpostman.com/view/17414272/UVknsb7L)
